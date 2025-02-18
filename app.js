@@ -17,19 +17,19 @@
 
 // task 2
 /*function signature/sample */
-function  validEmail( email ) {
+// function  validEmail( email ) {
 
-        if(typeof email !== "string"){
-            return "Invalid"
-        }
-        let chack = ".-_+@";
-        if(chack.includes(email[0]) || email.includes(" ") || !email.endsWith(".com") || !email.includes('@')){
-            return false;
-        }
+//         if(typeof email !== "string"){
+//             return "Invalid"
+//         }
+//         let chack = ".-_+@";
+//         if(chack.includes(email[0]) || email.includes(" ") || !email.endsWith(".com") || !email.includes('@')){
+//             return false;
+//         }
         
-        return true;
-}
-console.log(validEmail("he ro@alom.com"))
+//         return true;
+// }
+// console.log(validEmail("he ro@alom.com"))
 
 
 // task 3
@@ -87,3 +87,27 @@ console.log(validEmail("he ro@alom.com"))
 // );
 
 // console.log(friend);
+
+
+// task 5
+/*function signature/sample */
+function  calculateWatchTime( times ) {
+    if(!Array.isArray(times)){
+        return "Invalid"
+    }
+
+    let timeCount = 0;
+    for(let i = 0; i < times.length; i++){
+        timeCount +=(times[i])
+        if(typeof timeCount !== 'number'){
+            return "Invalid";
+        };
+    }
+    let sum = timeCount;
+    let hours = Math.floor(sum / 3600);
+    let minutes = Math.floor((sum % 3600) / 60);
+    let seconds = sum % 60;
+    return {hours, minutes, seconds};
+}
+
+console.log(calculateWatchTime(100, 3800, 90));
