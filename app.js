@@ -1,4 +1,4 @@
-// task 1
+
 // function cashOut( money ) {
 
 //     if(typeof money !== 'number' || money < 0){
@@ -9,7 +9,7 @@
 //     return sum;
 // }
 
-// console.log(cashOut(2000));
+// console.log(cashOut(50000));
 
 
 // task 2
@@ -18,17 +18,18 @@
 //         if(typeof email !== "string"){
 //             return "Invalid"
 //         }
-//         let chack = ".-_+@";
-//         if(chack.includes(email[0]) || email.includes(" ") || !email.endsWith(".com") || !email.includes('@')){
+//         let check = ".-_+@";
+//         if(check.includes(email[0]) || email.includes(" ") || 
+//             !email.endsWith(".com") || !email.includes('@')){
 //             return false;
 //         }
         
 //         return true;
 // }
-// console.log(validEmail("-king@yahoo.com"))
+// console.log(validEmail("king@yahoo.com"))
 
 
-// task 3
+
 // function  electionResult(votes) {
 //     if(!Array.isArray(votes)){
 //         return "Invalid";
@@ -54,12 +55,13 @@
 //         return 'Draw';
 //     }
     
+    
 // }
 
-// console.log(electionResult(["mango", "BananA", "na vote", "na vote"]))
+// console.log(electionResult(["mango", "banana", "mango", "banana", "mango"]))
 
 
-// task 4
+
 // function  isBestFriend( f1, f2 ) {
 
 //     if(typeof f1 !=='object' || typeof f2 !== 'object'){
@@ -81,23 +83,24 @@
 // ));
 
 
-// task 5
-function  calculateWatchTime( times ) {
-    if(!Array.isArray(times)){
-        return "Invalid"
-    }
-    let timeCount = 0;
-    for(let i = 0; i < times.length; i++){
-        if(typeof times[i] !== 'number'){
-            return "Invalid";
-        };
-        timeCount +=(times[i])
-    }
-    let sum = timeCount;
-    let hours = Math.floor(sum / 3600);
-    let minutes = Math.floor((sum % 3600) / 60);
-    let seconds = sum % 60;
-    return {hours, minutes, seconds};
-}
 
-console.log(calculateWatchTime([5600]));
+// function  calculateWatchTime( times ) {
+//     if(!Array.isArray(times)){
+//         return "Invalid"
+//     }
+//     let timeCount = 0;
+//     for(let i = 0; i < times.length; i++){
+//         if(typeof times[i] !== 'number'){
+//             return "Invalid";
+//         };
+//         timeCount +=(times[i])
+//     }
+//     let sum = timeCount;
+//     let hours = Math.floor(sum / 3600);
+//     let minutes = Math.floor((sum % 3600) / 60);
+//     let seconds = sum % 60;
+//     return {hours, minutes, seconds};
+// }
+
+// console.log(calculateWatchTime([5600]));
+
