@@ -1,8 +1,5 @@
 // task 1
-
-/*function signature/sample */
 // function cashOut( money ) {
-
 
 //     if(typeof money !== 'number' || money < 0){
 //         return "Invalid"
@@ -16,7 +13,6 @@
 
 
 // task 2
-/*function signature/sample */
 // function  validEmail( email ) {
 
 //         if(typeof email !== "string"){
@@ -29,15 +25,15 @@
         
 //         return true;
 // }
-// console.log(validEmail("he ro@alom.com"))
+// console.log(validEmail("-king@yahoo.com"))
 
 
 // task 3
-/*function signature/sample */
 // function  electionResult(votes) {
 //     if(!Array.isArray(votes)){
 //         return "Invalid";
 //     }
+
 //     let mangovote = 0;
 //     let bananavote = 0;
 //     for(let vote of votes){
@@ -60,12 +56,11 @@
     
 // }
 
-// console.log(electionResult("mango , banana"))
+// console.log(electionResult(["mango", "BananA", "na vote", "na vote"]))
 
 
 // task 4
-/*function signature/sample */
-// function  isBestFriend( f1 , f2 ) {
+// function  isBestFriend( f1, f2 ) {
 
 //     if(typeof f1 !=='object' || typeof f2 !== 'object'){
 //         return "Invalid";
@@ -80,28 +75,23 @@
 //     }
 // }
 
-// const friend = isBestFriend(
+// console.log(isBestFriend(
 //     { name: "hashem", roll: 1 , bestFriend: 1},
 // { name: "kashem" , roll: 1, bestFriend: 1 }
-
-// );
-
-// console.log(friend);
+// ));
 
 
 // task 5
-/*function signature/sample */
 function  calculateWatchTime( times ) {
     if(!Array.isArray(times)){
         return "Invalid"
     }
-
     let timeCount = 0;
     for(let i = 0; i < times.length; i++){
-        timeCount +=(times[i])
-        if(typeof timeCount !== 'number'){
+        if(typeof times[i] !== 'number'){
             return "Invalid";
         };
+        timeCount +=(times[i])
     }
     let sum = timeCount;
     let hours = Math.floor(sum / 3600);
@@ -110,4 +100,4 @@ function  calculateWatchTime( times ) {
     return {hours, minutes, seconds};
 }
 
-console.log(calculateWatchTime(100, 3800, 90));
+console.log(calculateWatchTime([5600]));
